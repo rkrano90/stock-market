@@ -1,0 +1,219 @@
+body{
+    min-width: 1100px;
+}
+
+.login-form {
+    width: 340px;
+    margin: 50px auto;
+    background: #f7f7f7;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+
+.login-form h2 {
+    margin: 0 0 15px;
+}
+.form-control, .btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+.btn {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.login-title{
+    font-size: 26px;
+    font-weight: 700;
+    height:36.8px;
+    line-height: 37.1429px;
+    text-align:center;
+}
+
+.modal-register {
+    color: black;
+    width: 350px;
+}
+.modal-register .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+}
+.modal-register .modal-header {
+    border-bottom: none;
+    position: relative;
+    justify-content: center;
+}
+.modal-register h4 {
+    text-align: center;
+    font-size: 26px;
+}
+.modal-register  .form-group, .login-form .form-group{
+    position: relative;
+}
+.modal-register i, .login-form i{
+    position: absolute;
+    left: 13px;
+    top: 11px;
+    font-size: 18px;
+}
+.modal-register .form-control, .login-form .form-control {
+    padding-left: 40px;
+}
+.modal-register .form-control:focus, .login-form, .form-control:focus {
+    border-color: #00ce81;
+}
+.modal-register .form-control, .modal-register .btn, .login-form .form-control, .login-form .btn {
+    min-height: 40px;
+    border-radius: 3px;
+}
+.modal-register .hint-text {
+    text-align: center;
+    padding-top: 10px;
+}
+.modal-register .close {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+.trigger-btn {
+    display: inline-block;
+    margin: 100px auto;
+}
+
+#loginFormMsg{
+    font-style: italic;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+@keyframes loader {
+    to {transform: rotate(360deg);}
+}
+
+.loader:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    border-top-color: #333;
+    animation: spinner .6s linear infinite;
+}
+
+.colHead{
+    font-weight:bold;
+}
+
+.colInfo{
+    font-style:italic;
+}
+
+#stockDiv,#headerDiv{
+    min-width:90%;
+}
+
+.custTable tbody tr td, .custTable thead tr th{
+    max-width:25%;
+    border-bottom:1px solid #DFDFDF;
+    text-align:center;
+}
+
+#balanceDiv, .innerDiv{
+    display: flex;
+    justify-content: center;
+}
+
+.custTable2{
+    width:420px;
+    border:1px solid #DFDFDF;
+    align-self:center;
+}
+
+.greenTxt{
+    color:green;
+}
+
+.redTxt{
+    color:red;
+}
+
+.btn-xs{
+    font-size: 14px;
+    min-height: 30px;
+}
+
+#buyStock{
+    width:70px;
+}
+
+#addFunds{
+    width:120px;
+}
+
+#userStockTable thead th{
+    font-weight:bold;
+}
+
+#userStockTable tbody tr td,
+#userStockTable thead tr th,
+#userStockTable thead {
+    border-left: 1px solid #DFDFDF;
+    border-right: 1px solid #DFDFDF;
+    vertical-align: middle;
+}
+
+#userStockTable{
+    width:767px;
+    align-self:center;
+    border-bottom: 1px solid #DFDFDF;
+}
+
+#userStockTable tbody{
+    max-height:390px;
+    overflow-y:scroll;
+    display:block
+}
+
+#userStockTable thead, #userStockTable tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+
+#userStockTable thead{
+    width: calc(100% - 16.5px);
+}
+
+#userStockTable tbody tr td{
+    height:100px;
+}
+
+.customTD{
+    font-size:16px !important;
+}
+
+#portfolioValueTable{
+    width:250px;
+    border:1px solid #DFDFDF;
+    align-self:center;
+}
+
+.overlay {
+    background: #e9e9e9;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+}

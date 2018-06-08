@@ -1,0 +1,1 @@
+<g:formatNumber number="${balance}" type="currency" currencyCode="USD" />
