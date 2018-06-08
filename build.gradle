@@ -81,3 +81,7 @@ assets {
     minifyCss = true
     includes = ["fonts/*"]
 }
+
+task stage {
+    dependsOn build
+}
