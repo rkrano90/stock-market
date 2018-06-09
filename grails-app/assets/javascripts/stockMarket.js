@@ -6,7 +6,9 @@ $( document ).ready(function() {
         minimumInputLength:"2"
     });
 
-    setInterval("refreshUserInfo()", 30000);
+    setInterval(function(){
+        refreshUserInfo();
+    }, 30000);
 });
 
 function getStockInfo() {
