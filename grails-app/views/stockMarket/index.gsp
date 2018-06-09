@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
+    <asset:javascript src="stockMarket.js"/>
     <title>Stock Market</title>
 </head>
 <body>

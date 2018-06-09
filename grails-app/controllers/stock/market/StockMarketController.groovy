@@ -47,6 +47,11 @@ class StockMarketController {
         def userId = new Long(params.userId)
         def amount = new Double(params.amount)
         def user = User.findById(userId)
+        if(amount > user.balance){
+            Map responseData = [error: "Not enough funds to withdraw"]
+            render(responseData as JSON)
+            return
+        }
         user.balance -= amount
         user.save(flush:true, failOnError:true)
         render(template:"userBalance", model:[balance:user.balance])

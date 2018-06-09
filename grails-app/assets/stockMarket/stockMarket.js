@@ -18,6 +18,7 @@ function getStockInfo() {
         data: {'ticker': $('#companyList').val()},
         url: "/stockMarket/getStockInfo",
         success: function (data) {
+            refreshUserInfo();
             $('#stockInfoDiv').empty().append(data);
         }
     });
@@ -52,16 +53,17 @@ function withdrawFunds(){
         return;
     }
 
-    if($('#amountFundsWithdraw').val() > parseFloat($('#userBalance').text().replace(/[^0-9.]/g,''))){
-        alert("Not Enough Funds To Withdraw");
-        return;
-    }
     $.ajax({
         type: 'POST',
         async: true,
         data: {'userId': $('#userId').val(), 'amount': $('#amountFundsWithdraw').val()},
         url: "/stockMarket/withdrawFunds",
         success: function (data) {
+            if(data.error){
+                refreshUserInfo();
+                alert(data.error);
+                return;
+            }
             $('#userBalance').empty().append(data);
             if($('#totalValueCell').length) {
                 var newTotal = parseFloat($('#totalValueCell').text().replace(/[^0-9.]/g,'')) - parseFloat($('#amountFundsWithdraw').val());
@@ -93,6 +95,7 @@ function buyStock(){
         url: "/stockMarket/buyStock",
         success: function (data) {
             if(data.error){
+                refreshUserInfo();
                 alert(data.error);
                 return;
             }
@@ -123,6 +126,7 @@ function sellStock(ticker){
         url: "/stockMarket/sellStock",
         success: function (data) {
             if(data.error){
+                refreshUserInfo();
                 alert(data.error);
                 return;
             }
